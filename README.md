@@ -40,3 +40,7 @@ packer build --only qemu.linux --var-file=centos.pkrvars.hcl .
 ```
 packer build --only qemu.linux --var-file=debian.pkrvars.hcl .
 ```
+#### Arch Linux
+```
+packer build --only qemu.arch --var-file=arch.pkrvars.hcl .
+```
