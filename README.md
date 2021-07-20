@@ -17,20 +17,7 @@ All provisioning is done by Ansible and a few environment variables must be set 
 * All Autounattend, preseed or kickstart files are in boot\_config direectory
 
 
-### Windows
-#### Server 2019
-```
-```
-
-#### Server 2012
-```
-```
-#### Server 2016
-```
-```
-
 ### Linux
-
 #### Debian 10
 ```
 packer build --only qemu.linux --var-file=centos.pkrvars.hcl .
@@ -43,4 +30,16 @@ packer build --only qemu.linux --var-file=debian.pkrvars.hcl .
 #### Arch Linux
 ```
 packer build --only qemu.arch --var-file=arch.pkrvars.hcl .
+```
+
+### Windows
+#### Server 2019
+```
+```
+
+#### Server 2012
+```
+```
+#### Server 2016
+```
 ```
