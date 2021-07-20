@@ -1,0 +1,20 @@
+lang en_US
+keyboard us
+timezone Europe/Berlin --isUtc
+rootpw $1$cbwOumoP$aoOXC73sB/71xQ.kkVWmd. --iscrypted
+#platform x86, AMD64, or Intel EM64T
+text
+cdrom
+bootloader --location=mbr --append="rhgb quiet crashkernel=auto"
+zerombr
+clearpart --all --initlabel
+autopart
+#auth --passalgo=sha512 --useshadow
+selinux --enforcing
+firewall --enabled
+skipx
+firstboot --disable
+%packages
+@^minimal-environment
+kexec-tools
+%end
