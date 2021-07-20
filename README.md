@@ -7,8 +7,8 @@ This repository contains the QEMU builder Packer Templates I use for my local de
 
 ## Environment Variables
 All provisioning is done by Ansible and a few environment variables must be set globally or locally. Local is best on shared machines. Use either ~/.profile or ~/.bash\_profile or perhaps whatever shell you choose to use. A good way to do this is to have everythin in ~/.profile and have your shell of choice source that. exporting the variables in the current shell is also an option,
-    * export PKR\_VAR\_ansible\_playbooks=
-    * export PKR\_VAR\_connection\_username=
+* export PKR\_VAR\_ansible\_playbooks=
+* export PKR\_VAR\_connection\_username=
 
 ## Usage
 * All below templates can be deployed with --force to overwrite the existing template
