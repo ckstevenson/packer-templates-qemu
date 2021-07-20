@@ -2,8 +2,8 @@
 This repository contains the QEMU builder Packer Templates I use for my local development machine.
 
 ### TODO
-[] Qemu Arch install could use Arch's new installer
-[] Windows templates
+- [] Qemu Arch install could use Arch's new installer
+- [] Windows templates
 
 ## Environment Variables
 All provisioning is done by Ansible and a few environment variables must be set globally or locally. Local is best on shared machines. Use either ~/.profile or ~/.bash\_profile or perhaps whatever shell you choose to use. A good way to do this is to have everythin in ~/.profile and have your shell of choice source that. exporting the variables in the current shell is also an option,
