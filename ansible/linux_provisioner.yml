@@ -1,0 +1,19 @@
+# Provisions Linux instances during the Packer deployment
+---
+- hosts: default
+  tasks:
+    - name: Set authorized key for user ubuntu copying it from current user
+      ansible.posix.authorized_key:
+        user: user
+        state: present
+        key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub') }}"
+    - name: Upgrade all packages when dnf
+      ansible.builtin.dnf:
+        name: '*'
+        state: latest
+      when:  ansible_pkg_mgr == "dnf"
+    - name: upgrade all packages when apt
+      ansible.builtin.apt:
+        upgrade: dist
+      when: ansible_pkg_mgr == "apt"
+

@@ -84,7 +84,7 @@ build {
 build {
   sources = ["source.qemu.linux"]
     provisioner "ansible" {
-        playbook_file = "${ var.ansible_playbooks }/linux_provisioner.yml"
+        playbook_file = "./ansible/linux_provisioner.yml"
         user = "user"
         #use_proxy = false
         extra_arguments = [

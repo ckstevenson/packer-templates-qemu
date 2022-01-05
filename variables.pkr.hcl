@@ -14,7 +14,7 @@ variable "iso_url" {
 }
 variable "output_directory" {
     type = string
-    default = "/home/cameron/Documents/Development/templates"
+    default = "/home/cameron/dev/templates"
 }
 variable "os_family" {
     type = string
@@ -49,7 +49,4 @@ variable "boot_command" {}
 variable "boot_config" {
     type = string
     default = "boot_config"
-}
-variable "ansible_playbooks" {
-    description = "The download url for the ISO"
 }
